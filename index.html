@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title> 20 Lat/Lng Object Literal</title>
+    <title> 21 Lat/Lng Object Literal</title>
     <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
  
     
@@ -111,15 +111,6 @@ function initMap() {
   });
 }
 
-    
-private void handleNewLocation(Location location) {
-    Log.d(TAG, location.toString());
-    double currentLatitude = location.getLatitude();
-    double currentLongitude = location.getLongitude();
-    LatLng latLng = new LatLng(currentLatitude, currentLongitude);
-    mMap.moveCamera(CameraUpdateFactory.newLatLng(latLng));
-    mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(latLng, 21));
-  }
       
     </script>
     
