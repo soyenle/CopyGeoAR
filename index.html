@@ -68,19 +68,9 @@ function initMap() {
     map: map,
   });
                       }        
-      );   
-      
-    
-      
-    };
-   
-      
-    
+      );       
+    };  
   });
-
-  
-  
-  
 
   const marker1 = new google.maps.Marker({
     // The below line is equivalent to writing:
@@ -122,7 +112,15 @@ function initMap() {
 }
 
     
-
+private void handleNewLocation(Location location) {
+    Log.d(TAG, location.toString());
+    double currentLatitude = location.getLatitude();
+    double currentLongitude = location.getLongitude();
+    LatLng latLng = new LatLng(currentLatitude, currentLongitude);
+    mMap.moveCamera(CameraUpdateFactory.newLatLng(latLng));
+    mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(latLng, 21));
+  }
+      
     </script>
     
     
